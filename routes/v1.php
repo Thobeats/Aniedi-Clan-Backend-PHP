@@ -6,14 +6,19 @@
 //*********************************Authentication Routes ******************
 
 //BrainyX *******************************
-Route::post('refresh', 'AuthController@refresh');
-Route::post('log', 'AuthController@login');
+
 //registration
 Route::post('register/admin', 'Auth\RegisterController@admin');//has a role of 0
 
 Route::post('register/doctor', 'Auth\RegisterController@doctor');//has a role of 1
 
-Route::post('register/gateman', 'Auth\RegisterController@gateman');//has a role 2
+Route::post('register/nurse', 'Auth\RegisterController@nurse');//has a role 2
+
+Route::post('register/receptionist', 'Auth\RegisterController@receptionist');//has a role 3
+
+Route::post('register/pharmacist', 'Auth\RegisterController@pharmacist');//has a role 4
+
+Route::post('register/patient', 'Auth\RegisterController@patient');//has a role 5
 
 //Login
 Route::post('login', 'Auth\LoginController@authenticate');
@@ -45,19 +50,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     //show one admin
     Route::get('admin/{id}', 'UserProfileController@showOneAdmin')->middleware('admin');
 
-     //**********John's Api***************//
-    //Edit Estate
-    Route::patch('/estate', 'EstateController@update')->middleware('admin');
-
-    //Delete Estates by estate_id
-    Route::delete('/estate/delete/{estate}', 'EstateController@deleteEstate')->middleware('admin');
-
-    //Admin only Delete Estates by estate_id
-    Route::delete('/estate/delete/{estate}', 'EstateController@deleteEstate')->middleware('admin');
-    
-    //Admin only Update Estates by estate_id
-    Route::patch('/estate/{id}', 'EstateController@update');
-
 });
 
 //Users Routes *******************************************************
@@ -78,101 +70,7 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 
     //Delete user account
     Route::delete('/user/delete', 'UserProfileController@destroy');
-    //*******Users interactions with Estates ****************************/
-    //View Estates
-    Route::get('/estates', 'EstateController@index');
 
-     //View Estates
-     Route::get('/estate/id/{id}', 'EstateController@show');
-
-     //Get Estates by name
-     Route::get('/estate/{name}', 'EstateController@search');
-
-    //View Estates by city
-    Route::get('/estate/city/{city}', 'EstateController@showCity');
-
-    //View Estates by country
-    Route::get('/estate/country/{country}', 'EstateController@showCountry');
-
-    //**********John's Api***************//
-    //Create Estate
-    Route::post('/estate', 'EstateController@store');
-
-    //payment 
-
-    //save payment
-    Route::post('/payment', 'GetPayment@postPayment');
-    //show payment
-    Route::get('/payment/{id}', 'GetPayment@getPayment');
-
-    //*********************************Visitor Routes ******************
-
-    // Ayeni Kehinde Oluwatosin *******************************
-
-    // Show all visitor
-    Route::get('visitor', 'VisitorController@index');
-
-    // Show single visitor
-    Route::get('visitor/{id}', 'VisitorController@show');
-
-    /** end Ayeni kehinde Oluwatosin ******************************/
-
-    // @iOreoluwa *******************************
-
-    // Edit Visitor account
-    Route::put('visitor/{id}', 'VisitorController@update');
-
-    // Delete Visitor account
-    Route::delete('visitor/{id}', 'VisitorController@destroy');
-
-    /** end @iOreoluwa ******************************/
-
-    // @andy *******************************
-    Route::post('visitor', [
-        'uses' => 'VisitorController@store',
-        'as'   => 'new.visitor',
-    ]);
-
-    //------------------------------End Visitor Routes --------------------
-
-
-    /*******************Dirkmal Message Routes */
-    // Get conversations between the current user and another user specified by their id (other_user_id)
+    //*******Users interactions with Hospitals ****************************/
     
-    // Save a message to the Database with the sender's id and the receiver's id
-    //  as well as the message itself
-    Route::get('messages/{other_user_id}', 'MessageController@conversation');
-    Route::post('/messages', 'MessageController@saveMessage');  
-    /*******************************End Message Routes */
-});
-
-//This our testing api routes
-Route::get('test', 'TestController@test');
-// Kazeem Asifat QRCode generator *******************************************
-//The qr code has been mordify to be sent as jason
-
-Route::get('generate-code', 'TestController@qrCode');                          
-Route::get('generate-code', 'TestController@qrCode');
-//-------------------------------------------------------------------------------------
-//---------------- Api Route for Service Provider -----------------------------------
-
-
-// Tobbhie Notification API***********************************************************
-Route::get('init', function () {
-    event(new App\Events\notify('Someone'));
-    return "Notification sent";
-});
-//end
-
-//******************* To Create a service provider ************************
-Route::post('/estate/service-provider/', 'ServiceProviderController@create');
-
-//-------------------------------------------------------------------------------------
-
-//******************* To view a specific service provider ************************
-Route::get('/estate/service-provider/{id}', 'ServiceProviderController@show');
-
-//******************* To Delete a specific service provider ************************
-Route::delete('/estate/service-provider/delete/{id}', 'ServiceProviderController@destroy');
-
 //-------------------------------------------------------------------------------------
