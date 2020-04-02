@@ -1,0 +1,479 @@
+{
+	"info": {
+		"_postman_id": "b58d3321-a5b0-475c-adc0-e334a3f7a863",
+		"name": "Thrive Health PHP laravel API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/v1/user/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9nIiwiaWF0IjoxNTg1NjkwMzE0LCJleHAiOjE1ODU3NzY3MTQsIm5iZiI6MTU4NTY5MDMxNCwianRpIjoiSGpId0hzZFgzd1JlS2RHNiIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.bLRSQcwtWErg3b0Gn-5WfksWxjY5Dh-9HuA_s1OPF2U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/user/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"all"
+					]
+				},
+				"description": "End point to get all users"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/v1/user/all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Apr 2020 17:25:31 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Apr 2020 17:25:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "86400"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Requested-With"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"admins\": [\n        {\n            \"id\": 1,\n            \"fullname\": \"sikie yah\",\n            \"phone\": null,\n            \"email\": \"sa@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"0\",\n            \"api_token\": null,\n            \"created_at\": \"2020-03-31 23:04:45\",\n            \"updated_at\": \"2020-03-31 22:04:45\"\n        },\n        {\n            \"id\": 3,\n            \"fullname\": \"sikie Seun\",\n            \"phone\": null,\n            \"email\": \"san@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"0\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:16:15\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 8,\n            \"fullname\": \"Gift She\",\n            \"phone\": null,\n            \"email\": \"shake@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"0\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:20:24\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        }\n    ],\n    \"doctors\": [\n        {\n            \"id\": 2,\n            \"fullname\": \"James Jon\",\n            \"phone\": null,\n            \"email\": \"jjn@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"1\",\n            \"api_token\": null,\n            \"created_at\": \"2020-03-31 22:48:44\",\n            \"updated_at\": \"2020-03-30 14:02:53\"\n        },\n        {\n            \"id\": 4,\n            \"fullname\": \"James Jones\",\n            \"phone\": null,\n            \"email\": \"jon@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"1\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:16:15\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 7,\n            \"fullname\": \"Akin Duo\",\n            \"phone\": null,\n            \"email\": \"akin@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"1\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:16:15\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 9,\n            \"fullname\": \"James Wale\",\n            \"phone\": null,\n            \"email\": \"wale@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"1\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:20:24\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 13,\n            \"fullname\": \"Alimo Seun\",\n            \"phone\": null,\n            \"email\": \"alim@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"1\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:24:56\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        }\n    ],\n    \"nurses\": [\n        {\n            \"id\": 14,\n            \"fullname\": \"Shola Jones\",\n            \"phone\": null,\n            \"email\": \"shola@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"2\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:24:56\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 15,\n            \"fullname\": \"Maria Jones\",\n            \"phone\": null,\n            \"email\": \"maria@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"2\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:24:56\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 16,\n            \"fullname\": \"Beauty Dale\",\n            \"phone\": null,\n            \"email\": \"dale@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"2\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:24:56\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        }\n    ],\n    \"receptionists\": [\n        {\n            \"id\": 12,\n            \"fullname\": \"Haruna Duo\",\n            \"phone\": null,\n            \"email\": \"har@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"3\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:20:24\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        }\n    ],\n    \"pharmacists\": [\n        {\n            \"id\": 5,\n            \"fullname\": \"Jide Jones\",\n            \"phone\": null,\n            \"email\": \"jide@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"4\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:16:15\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 6,\n            \"fullname\": \"Lara Lans\",\n            \"phone\": null,\n            \"email\": \"lans@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"4\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:16:15\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        }\n    ],\n    \"patients\": [\n        {\n            \"id\": 10,\n            \"fullname\": \"Jide Lagbaja\",\n            \"phone\": null,\n            \"email\": \"gbaja@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"5\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:20:24\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        },\n        {\n            \"id\": 11,\n            \"fullname\": \"Ade Tonny\",\n            \"phone\": null,\n            \"email\": \"ade@mail.com\",\n            \"user_type\": null,\n            \"photo\": null,\n            \"hospital_id\": null,\n            \"hmo_card_no\": null,\n            \"hmo_name\": null,\n            \"role\": \"5\",\n            \"api_token\": null,\n            \"created_at\": \"2020-04-01 18:20:24\",\n            \"updated_at\": \"-0001-11-30 00:00:00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9nIiwiaWF0IjoxNTg1NjkwMzE0LCJleHAiOjE1ODU3NzY3MTQsIm5iZiI6MTU4NTY5MDMxNCwianRpIjoiSGpId0hzZFgzd1JlS2RHNiIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.bLRSQcwtWErg3b0Gn-5WfksWxjY5Dh-9HuA_s1OPF2U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sa@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				},
+				"description": "endpoint to get an active user"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/v1/user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sa@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Apr 2020 17:21:20 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Apr 2020 17:21:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "86400"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Requested-With"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"fullname\": \"sikie yah\",\n    \"phone\": null,\n    \"email\": \"sa@mail.com\",\n    \"user_type\": null,\n    \"photo\": null,\n    \"hospital_id\": null,\n    \"hmo_card_no\": null,\n    \"hmo_name\": null,\n    \"role\": \"0\",\n    \"api_token\": null,\n    \"created_at\": \"2020-03-31 23:04:45\",\n    \"updated_at\": \"2020-03-31 22:04:45\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9nIiwiaWF0IjoxNTg1NjkwMzE0LCJleHAiOjE1ODU3NzY3MTQsIm5iZiI6MTU4NTY5MDMxNCwianRpIjoiSGpId0hzZFgzd1JlS2RHNiIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.bLRSQcwtWErg3b0Gn-5WfksWxjY5Dh-9HuA_s1OPF2U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1NzA3MDE1NzgsImV4cCI6MTU3MDcwNTE3OCwibmJmIjoxNTcwNzAxNTc4LCJqdGkiOiI4OXFiNWFuVHE3MVpGb0RkIiwic3ViIjo5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.7RksTelB85zgVAE5sHxyCGiQsNU5NnLv26a9vyhWnWg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "san@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				},
+				"description": "endpoint to login as a verified user"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/v1/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1NzA3MDE1NzgsImV4cCI6MTU3MDcwNTE3OCwibmJmIjoxNTcwNzAxNTc4LCJqdGkiOiI4OXFiNWFuVHE3MVpGb0RkIiwic3ViIjo5LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.7RksTelB85zgVAE5sHxyCGiQsNU5NnLv26a9vyhWnWg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "san@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Apr 2020 17:35:34 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Apr 2020 17:35:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "86400"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization, X-Requested-With"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Login Successful | Welcome to Thrive Health!\",\n    \"user\": {\n        \"id\": 3,\n        \"fullname\": \"sikie Seun\",\n        \"phone\": null,\n        \"email\": \"san@mail.com\",\n        \"user_type\": null,\n        \"photo\": null,\n        \"hospital_id\": null,\n        \"hmo_card_no\": null,\n        \"hmo_name\": null,\n        \"role\": \"0\",\n        \"api_token\": null,\n        \"created_at\": \"2020-04-01 18:16:15\",\n        \"updated_at\": \"-0001-11-30 00:00:00\"\n    },\n    \"token\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1ODU3NjI1MzQsImV4cCI6MTU4NTg0ODkzNCwibmJmIjoxNTg1NzYyNTM0LCJqdGkiOiJVc1VmOGx6azMyV0ZFTDBLIiwic3ViIjozLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.De4DuD6jcj_gMA15ehqVNjmg_8xlZcPX962dgT8g8O0\"\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
